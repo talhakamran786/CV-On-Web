@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">0
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your CV</title>
+
+    <link rel="stylesheet" href="./cv.css" />
+
+
+</head>
+
+<body>
+
+    <div id="PickData">
+        <fieldset>
+            <legend>Persnal Information</legend>
+            <label>
+                Name : <input id="Name" type="text" /><br />
+            </label>
+            <label>
+                Father’s Name : <input id="fathname" type="text" /><br />
+            </label>
+            <label>
+                Date of Birth : <input id="dateb" type="date" /><br />
+            </label>
+            <label>
+                N.I.C # : <input id="number" type="number" /><br />
+            </label>
+            <label>
+                Nationality : <input id="nationality" type="text" /><br />
+            </label>
+            Gender :
+                <label>
+                
+              male: <input name="gender" id="Gender" type="radio"  />
+            </label>
+<label>
+    femail: <input name="gender" id="femail" type="radio"  />
+
+</label>
+
+            <br/>
+
+
+
+            Marital Status :
+ 
+            <label>
+                Married: <input name="Status " id="Married" type="radio"  />
+            </label>
+            <label>
+                UnMarried: <input name="Status " id="UnMarried" type="radio"  />
+
+            </label>
+            
+            
+            <br/>
+            <label>
+                Email: <input id="email" type="email" /><br />
+            </label>
+
+          <button onclick="PersSave()" >
+              Save
+          </button>
+
+        </fieldset>
+        <fieldset id="Skills">
+            <legend>Skills</legend>
+
+            <label>
+                Skill Name : <input id="MySkills"  /><br />
+            </label>
+            <button onclick="AddSkill()">ADD</button>
+
+        </fieldset>
+    
+        <fieldset id="Exp">
+            <legend>Experience</legend>
+
+            <label>
+                Experience Detail : <input   id="Exper" /><br />
+            </label>
+            <button onclick="AddExp()">ADD</button>
+
+        </fieldset>
+
+        <fieldset id="Qual">
+            <legend>Qualification</legend>
+
+            <label>
+                Qualification Detail : <input  id="qual"  /><br />
+            </label>
+            <button onclick="AddQual()">ADD</button>
+
+        </fieldset>
+    
+    
+    
+        <fieldset id="cour">
+            <legend>Other Courses</legend>
+
+            <label>
+                Course Detail : <input /><br />
+            </label>
+            <button onclick="Qual">ADD</button>
+
+        </fieldset>
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+    <div id="Main">
+        <div>
+
+            <h1 class="Head">CURRICULUM </h1>
+            <h1 class="Head" id="Head2">VITAE </h1>
+            <span class="cv">
+
+                Flat # 203, 2th​ Floor, Sana flower,<br /> Near
+                 muhammadi Masjid, Fawara <br />Chowk, Garden 
+                West, Karachi. 
+            </span>
+
+            <img src="./1LPCU6G.jpg" alt="your internet not connection" id="image">
+
+            <span id="name">Aqib Memon </span><br />
+            <span id="num">Cell: +92 316 2532723 </span>
+
+        </div>
+
+        <hr>
+        <h4 class="ahead">P​ERSONAL​ I​NFORMATION  </h4>
+
+
+        <!-- <span> -->
+        <ul class="firstul">
+
+            <li> Father’s Name : </li>
+            <li> Date of Birth :</li>
+            <li> N.I.C # :</li>
+            <li> Nationality : </li>
+            <li>Marital Status : </li>
+            <li>Mother Tongue :</li>
+            <li>Email : </li>
+
+        </ul>
+
+        <!-- </span> -->
+
+
+        <ul class="firstul" id="SecUL">
+            <li>Muhammad Iqbal</li>
+            <li>29​th​ June 1998</li>
+            <li>42000-9232739-5 </li>
+            <li>Pakistani</li>
+            <li>UnMarried</li>
+            <li>Memon</li>
+            <li>maqibmemon786@gmail.com</li>
+        </ul>
+
+        <hr />
+        <h4 class="ahead">C​OMPUTER​ S​KILLS </h4>
+
+
+        <ul class="firstul">
+
+
+            <li> Computrized Accounting ( Adv. Excel, PeachTree, QuickBook, Tally )  </li>
+            <li>Micro Soft Office </li>
+            <li> HTML / CSS </li>
+            <li>JavaScript </li>
+            <li>React js </li>
+            <li>Node js </li>
+            <li> FireBase / MongoDB</li>
+            <li>Web Third Party Libraries </li>
+
+        </ul>
+        <hr />
+        <h4 class="ahead">W​ORKING​ E​XPERIENCE </h4>
+        <ul class="firstul">
+            <li> 3 Year worked as a “Reports Writing Inchanrge” in (​S.R Textile Laboratories (Pvt.) <br />
+                Ltd.​)(​S.I.T.E​) </li>
+            <li>6 Month worked as a “Accountant” in (​Lakhani Electronics​) </li>
+            <li> 6 Month worked as a Internet Service Provider “Net Working” in(​Lucky 7 Garden​) 
+            </li>
+        </ul>
+        <hr>
+
+        <h4 class="ahead">A​CADEMIC​ Q​UALIFICATION </h4>
+
+        <ul class="firstul">
+            <li> Bachelor of Commerce ​ ​from Karachi University ( ​Continues​ )  </li>
+            <li> Inter Commerce from Board of Intermediate Education Karachi. ?</li>
+            <li>Matriculation Science​ ​from Board of Secondary Education </li>
+        </ul>
+
+        <hr />
+
+        <h4 class="ahead">OTHER COURSES</h4>
+        <ul class="firstul">
+            <li> Certified in Web & Mobile App Development in CMAD Institute</li>
+            <li>Computrize Accounting (Peachtree,Tally9,QuickBook,Adv.Excel)in Roshi Computer</li>
+            <li> Micro Soft Office Course in Shams Coaching Centre in Garden</li>
+        </ul>
+
+        <div><button id="print">print</button></div>
+    </div>
+
+
+
+
+    <button onclick="document.getElementById('Main').style.display='block'">Show CV</button>
+    <button onclick="document.getElementById('Main').style.display='none'">Hide CV</button>
+
+
+<script src="./CV.js"></script>
+
+    <script>
+
+
+       
+    </script>
+
+</body>
+
+</html>

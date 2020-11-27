@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">0
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -14,13 +14,21 @@
 <body>
 
     <div id="PickData">
+        <h1>Data Form</h1>
         <fieldset>
             <legend>Persnal Information</legend>
+            <form onsubmit="PersSave()"  action="#" >
             <label>
                 Name : <input id="Name" type="text" /><br />
             </label>
             <label>
                 Father’s Name : <input id="fathname" type="text" /><br />
+            </label>
+            <label>
+                Mobile # <input id="mobil" type="number" /><br />
+            </label>
+            <label>
+                Address : <input id="addres" type="text" /><br />
             </label>
             <label>
                 Date of Birth : <input id="dateb" type="date" /><br />
@@ -34,10 +42,10 @@
             Gender :
                 <label>
                 
-              male: <input name="gender" id="Gender" type="radio"  />
+              male: <input name="gender"  id="male" type="radio" value="Male"  />
             </label>
 <label>
-    femail: <input name="gender" id="femail" type="radio"  />
+    femail: <input name="gender" id="female" type="radio" value="Female" />
 
 </label>
 
@@ -61,19 +69,22 @@
                 Email: <input id="email" type="email" /><br />
             </label>
 
-          <button onclick="PersSave()" >
+          <button onclick="" >
               Save
           </button>
+        </form>
 
         </fieldset>
-        <fieldset id="Skills">
+        <fieldset >
             <legend>Skills</legend>
 
             <label>
                 Skill Name : <input id="MySkills"  /><br />
             </label>
             <button onclick="AddSkill()">ADD</button>
+             <ul id="Skills" >
 
+             </ul>
         </fieldset>
     
         <fieldset id="Exp">
@@ -102,12 +113,11 @@
             <legend>Other Courses</legend>
 
             <label>
-                Course Detail : <input /><br />
+                Course Detail : <input  id="course" /><br />
             </label>
             <button onclick="Qual">ADD</button>
 
         </fieldset>
-
 
 
 
@@ -131,15 +141,14 @@
             <h1 class="Head" id="Head2">VITAE </h1>
             <span class="cv">
 
-                Flat # 203, 2th​ Floor, Sana flower,<br /> Near
-                 muhammadi Masjid, Fawara <br />Chowk, Garden 
-                West, Karachi. 
+               <br /> 
+                 <br />
             </span>
-
+            
             <img src="./1LPCU6G.jpg" alt="your internet not connection" id="image">
-
-            <span id="name">Aqib Memon </span><br />
-            <span id="num">Cell: +92 316 2532723 </span>
+<br />
+            <span id="showname">Aqib Memon </span><br />
+            <span id="num">Cell: </span>
 
         </div>
 
@@ -151,11 +160,11 @@
         <ul class="firstul">
 
             <li> Father’s Name : </li>
-            <li> Date of Birth :</li>
+                    <li> Date of Birth :</li>
             <li> N.I.C # :</li>
             <li> Nationality : </li>
+            <li>Gender : </li>
             <li>Marital Status : </li>
-            <li>Mother Tongue :</li>
             <li>Email : </li>
 
         </ul>
@@ -164,51 +173,34 @@
 
 
         <ul class="firstul" id="SecUL">
-            <li>Muhammad Iqbal</li>
-            <li>29​th​ June 1998</li>
-            <li>42000-9232739-5 </li>
-            <li>Pakistani</li>
-            <li>UnMarried</li>
-            <li>Memon</li>
-            <li>maqibmemon786@gmail.com</li>
+        <li id ="father" >Muhammad Iqbal</li>
+        <li id="birth" >29​th​ June 1998</li>
+         <li id="NIC" >42000-9232739-5 </li>
+        <li id="national" >Pakistani</li>
+        <li>Male</li>
+        <li>UnMarried</li>
+        <li id="mail" >maqibmemon786@gmail.com</li>
         </ul>
 
         <hr />
         <h4 class="ahead">C​OMPUTER​ S​KILLS </h4>
 
 
-        <ul class="firstul">
-
-
-            <li> Computrized Accounting ( Adv. Excel, PeachTree, QuickBook, Tally )  </li>
-            <li>Micro Soft Office </li>
-            <li> HTML / CSS </li>
-            <li>JavaScript </li>
-            <li>React js </li>
-            <li>Node js </li>
-            <li> FireBase / MongoDB</li>
-            <li>Web Third Party Libraries </li>
-
+        <ul class="firstul" id="ShowSkill" >
+            
         </ul>
+
         <hr />
         <h4 class="ahead">W​ORKING​ E​XPERIENCE </h4>
-        <ul class="firstul">
-            <li> 3 Year worked as a “Reports Writing Inchanrge” in (​S.R Textile Laboratories (Pvt.) <br />
-                Ltd.​)(​S.I.T.E​) </li>
-            <li>6 Month worked as a “Accountant” in (​Lakhani Electronics​) </li>
-            <li> 6 Month worked as a Internet Service Provider “Net Working” in(​Lucky 7 Garden​) 
-            </li>
-        </ul>
+
+        <ul id="showexp"> </ul>
+
+
         <hr>
 
         <h4 class="ahead">A​CADEMIC​ Q​UALIFICATION </h4>
 
-        <ul class="firstul">
-            <li> Bachelor of Commerce ​ ​from Karachi University ( ​Continues​ )  </li>
-            <li> Inter Commerce from Board of Intermediate Education Karachi. ?</li>
-            <li>Matriculation Science​ ​from Board of Secondary Education </li>
-        </ul>
-
+<ul id="Showqual" ></ul>
         <hr />
 
         <h4 class="ahead">OTHER COURSES</h4>
@@ -218,15 +210,16 @@
             <li> Micro Soft Office Course in Shams Coaching Centre in Garden</li>
         </ul>
 
-        <div><button id="print">print</button></div>
+        <div><button id="print" onclick="Printme()" >print</button></div>
     </div>
 
 
 
-
-    <button onclick="document.getElementById('Main').style.display='block'">Show CV</button>
-    <button onclick="document.getElementById('Main').style.display='none'">Hide CV</button>
-
+<div id="btndiv" >
+    <button onclick="showCV()" >Show CV</button>
+    <button onclick="document.getElementById('Main').style.display='none';document.getElementById('PickData').style.display='block'">
+        Hide CV</button>
+    </div>
 
 <script src="./CV.js"></script>
 

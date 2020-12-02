@@ -1,17 +1,20 @@
 
 var Name = "";
 var FathName = "";
+var Address = "";
 var DOB = "";
-var NIC = "";
+var Mobile = "";
+var MyNIC = "";
 var Gender = "";
 var Status = "";
-var Email = "";
-var Mobile = "";
-var address = "";
-var Skills = []
-var Exp = []
-var Qual = []
-function PersSave() {
+var nationality ="";
+var email ="";
+
+
+function PersSave(){
+
+event.preventDefault()
+
     if(document.getElementById("Name").value!="")
     {
         Name = document.getElementById("Name").value;        
@@ -20,8 +23,8 @@ function PersSave() {
         alert("Please Enter  >> Name <<")
     }
 if(document.getElementById("fathname").value!=""){
+    FathName = document.getElementById("fathname").value;
 
-    fathname = document.getElementById("fathname").value;
 
 }
 else{
@@ -35,12 +38,44 @@ if( document.getElementById("mobil").value!=""){
 else{
     alert("Please Enter >>Mobile number<<")
 }
+if( document.getElementById("addres").value!=""){
 
-    address = document.getElementById("addres").value;
-    dateb = document.getElementById("dateb").value;
-    number = document.getElementById("number").value;
+    Address = document.getElementById("addres").value;
+}
+else{
+    alert("Please Enter >>Address<<")
+}
+if(document.getElementById("dateb").value!=""){
+
+    DOB = document.getElementById("dateb").value;
+}
+else{
+    alert("Please Enter >>Date Of Birth<<")
+}
+if(document.getElementById("number").value!=""){
+
+    MyNIC = document.getElementById("number").value;
+
+}
+else{
+    alert("Please Enter >>N.I.C<<")
+}
+if(document.getElementById("nationality").value!=""){
+
     nationality = document.getElementById("nationality").value;
+}
+else{
+    alert("Please Enter >>nationality<<")
+}
+if(document.getElementById("email").value!=""){
+
     email = document.getElementById("email").value;
+}
+else{
+    alert("Please Enter >>Email<<")
+}
+
+
     if(document.getElementById('male').checked){
        Gender = document.getElementById('male').value
     }
@@ -50,11 +85,35 @@ else{
     else{
         alert("Please Select Your >> Gender <<")
     }
-    // event.preventDefault()
-    
+
+if(document.getElementById("Married").checked){
+    Status = document.getElementById("Married").value
+
+}
+else if(document.getElementById("UnMarried").checked){
+    Status = document.getElementById("UnMarried").value
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     
 }
+    
+
 
 function AddSkill() {
 
@@ -99,18 +158,42 @@ function AddQual() {
     // document.getElementById("Qual").appendChild(node);
 }
 
+function addOther(){
+    var mycourse = document.getElementById("course").value
+    Courses.push(mycourse)
+console.log(mycourse)
+var node = document.createElement("li");
+var textnode = document.createTextNode(mycourse);        
+node.appendChild(textnode);
+document.getElementById("cour").appendChild(node);
+
+}
+
+
+var Skills = [];
+var Exp = [];
+var Qual = [];
+var Courses = [];
+
+
+
+
+
+
 function showCV() {
 
-    document.getElementById("showname").innerText = Name;
     document.getElementById('Main').style.display = 'block';
     document.getElementById('PickData').style.display = 'none';
-    document.getElementById("father").innerText = fathname;
-    document.getElementById("birth").innerText = dateb;
-    document.getElementById("NIC").innerText = number;
+    document.getElementById("showname").innerText = Name;
+    document.getElementById("father").innerText = FathName;
+    document.getElementById("birth").innerText = DOB;
+    document.getElementById("NIC").innerText = MyNIC;
     document.getElementById("national").innerText = nationality;
     document.getElementById("mail").innerText = email;
     document.getElementById("num").innerText = Mobile;
-    // document.getElementById("cv").innerText = address;
+    document.getElementById("address").innerText = Address;
+    document.getElementById("ShowGender").innerText = Gender;
+    document.getElementById("ShowStatus").innerText = Status;
 
 
     for (var i = 0; Skills.length > i; i++) {
@@ -131,7 +214,13 @@ function showCV() {
         nod.appendChild(textnod)
         document.getElementById("Showqual").appendChild(nod)
     }
+for (var s =0; Courses.length > s;  s++){
+    var node = document.createElement("li");
+    var textnode = document.createTextNode(Courses[s])
+    node.appendChild(textnode)
+    document.getElementById("showCOURSES").appendChild(node)
 
+}
 
 
 

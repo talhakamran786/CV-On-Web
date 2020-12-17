@@ -12,8 +12,7 @@ var email ="";
 
 
 function PersSave(){
-
-event.preventDefault()
+    event.preventDefault()
 
     if(document.getElementById("Name").value!="")
     {
@@ -22,25 +21,23 @@ event.preventDefault()
     else{
         alert("Please Enter  >> Name <<")
     }
-if(document.getElementById("fathname").value!=""){
-    FathName = document.getElementById("fathname").value;
-
-
+if(document.getElementById("FathName").value!=""){
+    FathName = document.getElementById("FathName").value;
 }
 else{
     alert("Please Enter  >>Father Name<<")
 }
     
-if( document.getElementById("mobil").value!=""){
+if( document.getElementById("inputEmail4").value!=""){
 
-    Mobile = document.getElementById("mobil").value;
+    Mobile = document.getElementById("inputEmail4").value;
 }
 else{
     alert("Please Enter >>Mobile number<<")
 }
-if( document.getElementById("addres").value!=""){
+if( document.getElementById("inputAddress").value!=""){
 
-    Address = document.getElementById("addres").value;
+    Address = document.getElementById("inputAddress").value;
 }
 else{
     alert("Please Enter >>Address<<")

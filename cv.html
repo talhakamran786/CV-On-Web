@@ -13,7 +13,7 @@
 </head>
 
 <body>
-
+  <!-- <div id="PickData"> -->
 <div id="FormDiv" >
     <h1>Data Form</h1>
     <fieldset>
@@ -21,17 +21,17 @@
     <form onsubmit="PersSave()"  action="#" >
         <div class="form-row">
           <div class="form-group col-md-6">
-            <label for="inputEmail4">Name</label>
-            <input type="text" class="form-control" id="inputEmail4" id="Name" > 
+            <label for="Name" >Name</label>
+            <input type="text" class="form-control" id="Name" > 
           </div>
           <div class="form-group col-md-6">
-            <label for="inputPassword4">Father’s Name</label>
-            <input type="text" class="form-control" id="inputPassword4" id="fathname" >
+            <label for="FathName">Father’s Name</label>
+            <input type="text" class="form-control" id="FathName" >
           </div>
         </div>
         <div class="form-group">
           <label for="inputAddress">Address</label>
-          <input type="text" class="form-control" id="inputAddress" id="addres"  >
+          <input type="text" class="form-control" id="inputAddress"   >
         </div>
         
 
@@ -40,11 +40,11 @@
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="inputEmail4">Mobile #</label>
-            <input type="number" class="form-control" id="inputEmail4" id="mobil" >
+            <input type="number" class="form-control" id="inputEmail4" >
           </div>
           <div class="form-group col-md-6">
             <label for="inputPassword4">N.I.C #</label>
-            <input type="number" class="form-control" id="inputPassword4" id="number" >
+            <input type="number" class="form-control" id="inputPassword4"  >
           </div>
         </div>
         <div class="form-row">
@@ -54,7 +54,7 @@
           </div>
           <div class="form-group col-md-6">
             <label for="inputPassword4">Date of Birth</label>
-            <input type="date" class="form-control" id="inputPassword4" id="dateb" >
+            <input type="date" class="form-control" id="inputPassword4"  >
           </div>
         </div>
         <div class="form-row">
@@ -89,11 +89,86 @@ UnMarried  <input name="Status" id="UnMarried" type="radio" value="UnMarried" />
         </div>
 
         
-        <button type="submit" class="btn btn-primary">Save</button>
+        <button type="submit" class="btn btn-primary" onclick="" >Save</button>
       </form>
     </fieldset>
 
+    
+<fieldset>
+  <legend>Skills</legend>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <input type="text" class="form-control" id="MySkills" >
+      </div>
+      <div class="form-group col-md-3">
+        <button class="form-control btn btn-primary"  onclick="AddSkill()" > ADD</button>            
+      </div>
     </div>
+    <ul id="Skills" >
+    </ul>
+  </fieldset>
+
+  <fieldset >
+    <legend>Experience</legend>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <input type="text" class="form-control" id="Exper" >
+        </div>
+        <div class="form-group col-md-3">
+          <button class="form-control btn btn-primary" onclick="AddExp()" > ADD</button>            
+        </div>
+      </div>
+      <ul id="Exp" >
+
+      </ul>
+    </fieldset>
+  
+    <fieldset >
+      <legend>Qualification</legend>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <input type="text" class="form-control" id="qual" >
+          </div>
+          <div class="form-group col-md-3">
+            <button class="form-control btn btn-primary"  onclick="AddQual()" > ADD</button>            
+          </div>
+        </div>
+        <ul id="Qual" >
+
+        </ul>
+      </fieldset>
+    
+      <fieldset >
+        <legend> Course</legend>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <input type="text" class="form-control" id="course" >
+            </div>
+            <div class="form-group col-md-3">
+              <button class="form-control btn btn-primary" onclick="addOther()" > ADD</button>            
+            </div>
+          </div>
+          <ul id="cour" >
+
+          </ul>
+        </fieldset>
+      
+</div>
+
+
+
+
+
+
+
+
+
+
+    <!-- </div> -->
+
+
+
+
 
 
 
@@ -108,10 +183,10 @@ UnMarried  <input name="Status" id="UnMarried" type="radio" value="UnMarried" />
         <!-- <h1>Data Form</h1>
         <fieldset>
             <legend>Persnal Information</legend>
-            <!-- <form onsubmit="PersSave()"  action="#" > -->
+            <form onsubmit="PersSave()"  action="#" >
                
 
-<!-- 
+
                 <label>
                 Name : <input id="Name" type="text" /><br />
             </label>
@@ -168,10 +243,10 @@ UnMarried  <input name="Status" id="UnMarried" type="radio" value="UnMarried" />
           <button onclick="" >
               Save
           </button>
-        </form> -->
+        </form> 
 
         </fieldset> -->
-        <fieldset >
+        <!-- <fieldset >
             <legend>Skills</legend>
 
             <label>
@@ -213,7 +288,7 @@ UnMarried  <input name="Status" id="UnMarried" type="radio" value="UnMarried" />
             </label>
             <button onclick="addOther()">ADD</button>
 
-        </fieldset>
+        </fieldset> -->
 
 
 
@@ -282,7 +357,7 @@ UnMarried  <input name="Status" id="UnMarried" type="radio" value="UnMarried" />
         <h4 class="ahead">C​OMPUTER​ S​KILLS </h4>
 
 
-        <ul class="firstul" id="ShowSkill" >
+        <ul  id="ShowSkill" >
             
         </ul>
 
@@ -300,7 +375,7 @@ UnMarried  <input name="Status" id="UnMarried" type="radio" value="UnMarried" />
         <hr />
 
         <h4 class="ahead">OTHER COURSES</h4>
-        <ul class="firstul" id="showCOURSES" >
+        <ul  id="showCOURSES" >
         </ul>
 
         <div><button id="print" onclick="Printme()" >print</button></div>
@@ -310,10 +385,10 @@ UnMarried  <input name="Status" id="UnMarried" type="radio" value="UnMarried" />
 
 <div id="btndiv" >
     <button onclick="showCV()" >Show CV</button>
-    <button onclick="document.getElementById('Main').style.display='none';document.getElementById('PickData').style.display='block'">
+    <button onclick="document.getElementById('Main').style.display='none';document.getElementById('FormDiv').style.display='block'">
         Hide CV</button>
     </div>
-
+    <!-- PickData -->
 <script src="./CV.js"></script>
 
     <script>

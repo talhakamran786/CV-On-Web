@@ -14,6 +14,8 @@ var email ="";
 function PersSave(){
     event.preventDefault()
 
+
+
     if(document.getElementById("Name").value!="")
     {
         Name = document.getElementById("Name").value;        
@@ -28,16 +30,16 @@ else{
     alert("Please Enter  >>Father Name<<")
 }
     
-if( document.getElementById("inputEmail4").value!=""){
+if( document.getElementById("mobil").value!=""){
 
-    Mobile = document.getElementById("inputEmail4").value;
+    Mobile = document.getElementById("mobil").value;
 }
 else{
     alert("Please Enter >>Mobile number<<")
 }
-if( document.getElementById("inputAddress").value!=""){
+if( document.getElementById("addres").value!=""){
 
-    Address = document.getElementById("inputAddress").value;
+    Address = document.getElementById("addres").value;
 }
 else{
     alert("Please Enter >>Address<<")
@@ -59,25 +61,28 @@ else{
 }
 if(document.getElementById("nationality").value!=""){
 
+
     nationality = document.getElementById("nationality").value;
 }
 else{
     alert("Please Enter >>nationality<<")
 }
-if(document.getElementById("email").value!=""){
+if(document.getElementById("myemail").value!=""){
 
-    email = document.getElementById("email").value;
+    email = document.getElementById("myemail").value;
+// alert()
+
 }
 else{
     alert("Please Enter >>Email<<")
 }
 
 
-    if(document.getElementById('male').checked){
-       Gender = document.getElementById('male').value
+    if(document.getElementById("male").checked){
+       Gender = document.getElementById("male").value
     }
-    else if(document.getElementById('female').checked){
-        Gender = document.getElementById('female').value
+    else if(document.getElementById("female").checked){
+        Gender = document.getElementById("female").value
     }
     else{
         alert("Please Select Your >> Gender <<")
@@ -180,7 +185,7 @@ var Courses = [];
 function showCV() {
 
     document.getElementById('Main').style.display = 'block';
-    document.getElementById('PickData').style.display = 'none';
+    document.getElementById('FormDiv').style.display = 'none';
     document.getElementById("showname").innerText = Name;
     document.getElementById("father").innerText = FathName;
     document.getElementById("birth").innerText = DOB;
